@@ -1,0 +1,410 @@
+﻿/* =============================================
+   GERADOR DE ETIQUETAS - HERBÁRIO EVB
+   Paleta de Cores Profissional
+   ============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 30px;
+    background-color: #0B3F39;
+    background-image: linear-gradient(135deg, #0B3F39 0%, #0E4F45 50%, #16665A 100%);
+    min-height: 100vh;
+    color: #2A2A2A;
+}
+
+/* Container principal */
+h1 {
+    text-align: center;
+    color: #E2C3A6;
+    font-size: 26px;
+    margin-bottom: 25px;
+    padding: 20px;
+    background-color: #2A2A2A;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #C5522A;
+}
+
+/* Instruções */
+.instrucoes {
+    background: linear-gradient(135deg, #121212 0%, #2A2A2A 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 5px solid #F3B233;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.instrucoes p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: #E2C3A6;
+}
+
+.instrucoes p strong {
+    color: #F3B233;
+}
+
+/* Seção de Upload */
+.upload-section {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.upload-item {
+    flex: 1;
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #0E4F45;
+    border-radius: 10px;
+    border: 2px solid #16665A;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.upload-item:hover {
+    border-color: #4BB8A3;
+}
+
+.upload-item label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #E2C3A6;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.upload-item input[type="file"] {
+    padding: 12px;
+    background-color: #16665A;
+    border: 2px dashed #1C7F6E;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #E2C3A6;
+    font-size: 13px;
+    transition: all 0.3s ease;
+}
+
+.upload-item input[type="file"]:hover {
+    border-color: #2E9987;
+    background-color: #1C7F6E;
+}
+
+.upload-item input[type="file"]::file-selector-button {
+    background-color: #C5522A;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.upload-item input[type="file"]::file-selector-button:hover {
+    background-color: #E56A2E;
+}
+
+/* Indicadores de Status */
+.status-indicador {
+    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.status-pendente {
+    background-color: #2A2A2A;
+    color: #CFA98B;
+    border: 1px solid #5C3A2B;
+}
+
+.status-carregando {
+    background-color: #F3B233;
+    color: #121212;
+    animation: pulse 1.5s infinite;
+}
+
+.status-sucesso {
+    background-color: #2E9987;
+    color: white;
+    font-weight: 600;
+    border: 1px solid #4BB8A3;
+}
+
+.status-erro {
+    background-color: #7A1E1B;
+    color: white;
+    font-weight: 600;
+    border: 1px solid #A8322A;
+}
+
+/* Animação para status carregando */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* Container de Etiquetas */
+#etiquetas-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #2A2A2A;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    min-height: 200px;
+}
+
+/* Etiqueta Individual */
+.etiqueta {
+    width: 10.5cm;
+    height: 2.97cm;
+    border: 1px solid #121212;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 12px;
+    display: flex;
+    text-align: left;
+    margin: 5px;
+    background-color: #ffffff;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease;
+    line-height: 1.1;	
+}
+
+.etiqueta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Colunas da Etiqueta */
+.coluna-esquerda {
+    width: 6.5cm;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.coluna-direita {
+    width: 4cm;
+    border-left: none;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #ffffff;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    width: 1.3cm;
+    height: auto;
+    position: absolute;
+    top: -1px;
+    right: 1px;
+}
+
+/* Código de Barras */
+.codigo-barras {
+    width: 3.5cm;
+    height: auto;
+    margin-top: 1cm;
+}
+
+/* =============================================
+   ESTILOS DAS INFORMAÇÕES DA ETIQUETA
+   ============================================= */
+
+.etiqueta .evb {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 1px;
+    color: #121212;
+}
+
+.etiqueta .familia {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    color: #121212;
+}
+
+.etiqueta .genero {
+    font-style: italic;
+    font-size: 11px;
+    color: #121212;
+}
+
+.etiqueta .epiteto {
+    font-style: italic;
+    font-size: 11px;
+    color: #121212;
+}
+
+.etiqueta .autor {
+    font-size: 9px;
+    display: inline;
+    color: #121212;
+}
+
+.etiqueta .determinador {
+    font-size: 9px;
+    color: #121212;
+}
+
+.etiqueta .data {
+    font-style: normal;
+    font-size: 9px;
+    font-weight: bold;
+    color: #121212;
+}
+
+.etiqueta .Coletor {
+    font-size: 9px;
+    display: inline;
+    color: #121212;
+}
+
+.etiqueta .NumeroColeta {
+    font-style: normal;
+    font-size: 10px;
+    font-weight: bold;
+    color: #121212;
+}
+
+.etiqueta div {
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Projeto na etiqueta */
+.etiqueta .projeto {
+    font-size: 9px;
+    color: #5C3A2B;
+    margin-top: 2px;
+    font-style: italic;
+}
+
+/* =============================================
+   BOTÃO GERAR PDF
+   ============================================= */
+
+#gerar-pdf {
+    display: block;
+    margin: 25px auto;
+    padding: 14px 40px;
+    background: linear-gradient(135deg, #C43A2E 0%, #A8322A 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+#gerar-pdf:hover {
+    background: linear-gradient(135deg, #E56A2E 0%, #C5522A 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+#gerar-pdf:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#gerar-pdf:disabled {
+    background: #5C3A2B;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+    
+    h1 {
+        font-size: 20px;
+        padding: 15px;
+    }
+    
+    .upload-section {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .upload-item {
+        min-width: 100%;
+    }
+    
+    #etiquetas-container {
+        padding: 10px;
+        gap: 10px;
+    }
+    
+    .etiqueta {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+    }
+    
+    .coluna-esquerda,
+    .coluna-direita {
+        width: 100%;
+    }
+    
+    #gerar-pdf {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8E5E45;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #CFA98B;
+}

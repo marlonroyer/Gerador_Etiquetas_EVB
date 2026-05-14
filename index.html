@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Etiquetas</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <h1>Gerador de Etiquetas Botânicas Herbário Evaldo Buttura</h1>
+    
+    <div class="instrucoes">
+        <p><strong>Passo 1:</strong> Selecione as imagens dos códigos de barras (.png)</p>
+        <p><strong>Passo 2:</strong> Selecione a planilha (.xls ou .xlsx)</p>
+    </div>
+    
+    <div class="upload-section">
+        <div class="upload-item">
+            <label for="imagensFile">📁 Imagens dos códigos de barras:</label>
+            <input type="file" id="imagensFile" accept=".png" multiple>
+            <span id="status-imagens" class="status-indicador">Nenhuma imagem selecionada</span>
+        </div>
+        
+        <div class="upload-item">
+            <label for="excelFile">📊 Planilha de dados:</label>
+            <input type="file" id="excelFile" accept=".xls,.xlsx">
+            <span id="status-planilha" class="status-indicador">Nenhuma planilha selecionada</span>
+        </div>
+    </div>
+    
+    <div id="etiquetas-container"></div>
+    <button id="gerar-pdf">Gerar PDF</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
