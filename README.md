@@ -17,7 +17,7 @@ Sistema web para geração de etiquetas botânicas a partir de planilhas Excel (
 - Tenha as imagens dos códigos de barras em PNG (formato: `EVB00[numtombo].png`)
 
 ### Passo 2: Abrir o sistema
-Acesse: `https://[seu-usuario].github.io/gerador-etiquetas-evb/`
+Acesse: https://marlonroyer.github.io/Gerador_Etiquetas_EVB/
 
 ### Passo 3: Carregar os dados
 1. Selecione as imagens dos códigos de barras (.png)
