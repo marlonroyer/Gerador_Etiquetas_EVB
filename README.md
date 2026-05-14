@@ -28,6 +28,7 @@ Acesse: [Gerador_Etiquetas_EVB](https://marlonroyer.github.io/Gerador_Etiquetas_
 
 ### Passo 4: Exportar
 - Clique em "Gerar PDF" para baixar as etiquetas em formato A4
+- Essa etapa pode ser rápida, como tambám pode ser muito lenta, depende do numero de etiquetas.
 
 ## Colunas necessárias na planilha
 
