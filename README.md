@@ -18,7 +18,7 @@ Sistema web para geração de etiquetas botânicas a partir de planilhas Excel (
 - As imagens são geradas a partir do [JABOTExtract](https://marlonroyer.github.io/JABOTExtract/)  que por sua vez precisa do PDF com os códigos de barra exportados diretamente pelo JABOT
 
 ### Passo 2: Abrir o sistema
-Acesse: https://marlonroyer.github.io/Gerador_Etiquetas_EVB/
+Acesse: [Gerador_Etiquetas_EVB](https://marlonroyer.github.io/Gerador_Etiquetas_EVB/)
 
 ### Passo 3: Carregar os dados
 1. Selecione as imagens dos códigos de barras (.png)
