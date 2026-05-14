@@ -1,14 +1,14 @@
-# 🏷️ Gerador de Etiquetas - Herbário Evaldo Buttura (EVB)
+# Gerador de Etiquetas - Herbário Evaldo Buttura (EVB)
 
 Sistema web para geração de etiquetas botânicas a partir de planilhas Excel (.xls/.xlsx), com suporte a códigos de barras em imagens PNG.
 
-## 📋 Funcionalidades
+## Funcionalidades
 
-- 📊 Leitura de planilhas Excel (.xls e .xlsx)
-- 🖼️ Upload de imagens de códigos de barras por lote
-- 🏷️ Geração automática de etiquetas formatadas
-- 📄 Exportação para PDF com layout A4 (2 etiquetas por linha)
-- 🎨 Interface moderna e responsiva
+- Leitura de planilhas Excel (.xls e .xlsx)
+- Upload de imagens de códigos de barras por lote
+- Geração automática de etiquetas formatadas
+- Exportação para PDF com layout A4 (2 etiquetas por linha)
+- Interface moderna e responsiva
 
 ## Como usar
 
