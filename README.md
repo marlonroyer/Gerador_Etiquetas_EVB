@@ -1,49 +1,66 @@
-# ??? Gerador de Etiquetas - Herbário Evaldo Buttura (EVB)
+# ğŸ·ï¸ Gerador de Etiquetas - HerbÃ¡rio Evaldo Buttura (EVB)
 
-Sistema web para geração de etiquetas botânicas a partir de planilhas Excel (.xls/.xlsx), com suporte a códigos de barras em imagens PNG.
+Sistema web para geraÃ§Ã£o de etiquetas botÃ¢nicas a partir de planilhas Excel (.xls/.xlsx), com suporte a cÃ³digos de barras em imagens PNG.
 
-## ?? Funcionalidades
+## ğŸ“‹ Funcionalidades
 
-- ?? Leitura de planilhas Excel (.xls e .xlsx)
-- ??? Upload de imagens de códigos de barras por lote
-- ??? Geração automática de etiquetas formatadas
-- ?? Exportação para PDF com layout A4 (2 etiquetas por linha)
-- ?? Interface moderna e responsiva
+- ğŸ“Š Leitura de planilhas Excel (.xls e .xlsx)
+- ğŸ–¼ï¸ Upload de imagens de cÃ³digos de barras por lote
+- ğŸ·ï¸ GeraÃ§Ã£o automÃ¡tica de etiquetas formatadas
+- ğŸ“„ ExportaÃ§Ã£o para PDF com layout A4 (2 etiquetas por linha)
+- ğŸ¨ Interface moderna e responsiva
 
-## ?? Como usar
+## Como usar
 
 ### Passo 1: Preparar os arquivos
-- Tenha sua planilha Excel (.xls ou .xlsx) com as colunas necessárias
-- Tenha as imagens dos códigos de barras em PNG (formato: `EVB00[numtombo].png`)
+- Tenha sua planilha Excel (.xls ou .xlsx) com as colunas necessÃ¡rias
+- Tenha as imagens dos cÃ³digos de barras em PNG (formato: `EVB00[numtombo].png`)
 
 ### Passo 2: Abrir o sistema
 Acesse: `https://[seu-usuario].github.io/gerador-etiquetas-evb/`
 
 ### Passo 3: Carregar os dados
-1. Selecione as imagens dos códigos de barras (.png)
+1. Selecione as imagens dos cÃ³digos de barras (.png)
 2. Selecione a planilha de dados (.xls ou .xlsx)
-3. As etiquetas serão geradas automaticamente
+3. As etiquetas serÃ£o geradas automaticamente
 
 ### Passo 4: Exportar
 - Clique em "Gerar PDF" para baixar as etiquetas em formato A4
 
-## ?? Colunas necessárias na planilha
+## Colunas necessÃ¡rias na planilha
 
-| Coluna na planilha | Descrição |
+| Coluna na planilha | DescriÃ§Ã£o |
 |-------------------|-----------|
-| `numtombo` | Número de tombo (gera o EVB) |
-| `family` | Família botânica |
-| `genus` | Gênero |
-| `sp1` | Epíteto específico |
+| `numtombo` | NÃºmero de tombo (gera o EVB) |
+| `family` | FamÃ­lia botÃ¢nica |
+| `genus` | GÃªnero |
+| `sp1` | EpÃ­teto especÃ­fico |
 | `author1` | Autor |
 | `detby` | Determinador |
-| `detdd` | Dia da determinação |
-| `detmm` | Mês da determinação |
-| `detyy` | Ano da determinação |
+| `detdd` | Dia da determinaÃ§Ã£o |
+| `detmm` | MÃªs da determinaÃ§Ã£o |
+| `detyy` | Ano da determinaÃ§Ã£o |
 | `collector` | Coletor |
-| `number` | Número de coleta |
+| `number` | NÃºmero de coleta |
 | `projeto` | Projeto |
 
-## ??? Formato das imagens
+## Formato das imagens
 
-As imagens dos códigos de barras devem seguir o padrão:
+As imagens dos cÃ³digos de barras devem seguir o padrÃ£o:
+EVB00[numtombo].png
+Exemplo: `EVB001234.png` (para o nÃºmero de tombo 1234)
+
+## Tecnologias utilizadas
+
+- HTML5 / CSS3 / JavaScript
+- [SheetJS](https://sheetjs.com/) - Leitura de arquivos Excel
+- [jsPDF](https://github.com/parallax/jsPDF) - GeraÃ§Ã£o de PDF
+- [html2canvas](https://html2canvas.hertzen.com/) - Captura de HTML para imagem
+
+## LicenÃ§a
+
+Este projeto Ã© de uso interno do HerbÃ¡rio Evaldo Buttura.
+
+## Desenvolvido por
+
+HerbÃ¡rio Evaldo Buttura (EVB)
